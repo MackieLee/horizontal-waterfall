@@ -1,0 +1,54 @@
+.hide{
+    display:none;
+}
+html,document,body{
+    height:100%;
+    margin:0;
+    font-size:18px;
+    background-color:#121212;
+}
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+a { text-decoration:none; }
+ul, ol { list-style:none; }
+a:hover { text-decoration:none; }
+fieldset, img { border:0; }
+table { border-collapse:collapse; border-spacing:0; }
+h1,h2,h3,h4,h5,h6{
+    font-weight:normal;
+}
+/*字体*/
+@font-face{
+    font-family:'fproBook';
+    src:url('fonts/FPro-book');
+    src:url('fonts/FPro-book.eot?#iefix') format('embedded-opentype'),
+    url('fonts/FPro-book.woff') format('woff'),
+    url('fonts/FPro-book.ttf') format('truetype'),
+    url('fonts/FPro-book.svg#woodstock_handmaderegular') format('svg');
+    font-weight:normal;font-style:normal;
+}
+@font-face{
+    font-family:'fproLight';
+    src:url('fonts/FPro-light');
+    src:url('fonts/FPro-light.eot?#iefix') format('embedded-opentype'),
+    url('fonts/FPro-light.woff') format('woff'),
+    url('fonts/FPro-light.ttf') format('truetype'),
+    url('fonts/FPro-light.svg#woodstock_handmaderegular') format('svg');
+    font-weight:normal;font-style:normal;
+}
+@font-face{font-family:'fproBold';
+    src:url('fonts/FPro-medium');src:url('fonts/FPro-medium.eot?#iefix') format('embedded-opentype'),
+    url('fonts/FPro-medium.woff') format('woff'),
+    url('fonts/FPro-medium.ttf') format('truetype'),
+    url('fonts/FPro-medium.svg#woodstock_handmaderegular') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+body{
+    font-family:fproLight;
+}
+.lf{
+    float: left;
+}
+.fr{
+    float: right;
+}

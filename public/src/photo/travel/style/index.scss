@@ -1,0 +1,289 @@
+@import "../../../../style/vendor.css";
+
+
+$font-family: fproBook fproLight fproBold;
+@mixin font-default($size:normal,$color:#fff,$transform:uppercase,$spacing:2.5px){
+    font-size: $size;
+    color: $color;
+    text-transform: $transform;
+    letter-spacing: $spacing;
+}
+.nav{
+    height:80px;
+    border-bottom:1px solid #1e1e1e;
+    background-color:#121212;
+    position:fixed;
+    top:0;
+    width:100%;
+    background-image:url('../../img/menu-halo.png');
+    background-repeat:no-repeat;
+    z-index:3000;
+}
+.logo{
+    height: 40px;
+    min-width: 400px;
+    position: relative;
+    background: url('../../img/bg-logo.png') no-repeat;
+    margin: 0 0 0 10px;
+    padding: 24px 0 0 78px;
+    a{
+        font-family:nth($font-family,1);
+        @include font-default(1.1em);
+    }
+    p{
+        @include font-default(0.6em,rgba(187,187,187,0.4), uppercase,1px);
+        background-image: url('../../img/menu-filet.png') no-repeat center center;
+        font-family: nth($font-family,1); 
+    }
+}
+.nav-nav{
+    position: absolute;
+    right: 12px;
+    top: 30px;
+    z-index:5000;
+}
+.nav-li li{
+    display: inline-block;
+    margin:0 11px;
+    a{
+        font-family: nth($font-family,1);
+        @include font-default(0.75em, #7a7a7a);
+        line-height: 20px;
+        background-image: url("../../img/menu-filet.png");
+        background-position: center center;
+        background-size: 0 7px;
+        padding: 0 11px;
+        background-repeat: no-repeat;
+        transition: 0.5s background-size;
+    }
+    .nav-img:hover{
+        background-size: 100% 7px;
+    }
+    .nav-article:hover{
+        background-size: 100% 7px;
+    }
+    .nav-about:hover{
+        background-size: 100% 7px;
+    }
+}
+.hamburger{
+    display: none;
+    z-index: 2000;
+}
+@media screen and  (max-width:768px){
+    .hamburger{
+        display: block;
+        position: absolute;
+        background:url('../../img/btn-nav.png');
+        height: 25px;
+        width: 25px;
+        top: 35%;
+        right:10px;
+    }
+    .nav-nav{
+        display: none;
+        float: none;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 30%;
+        margin: 175px 0;
+        .nav-li li{
+            display: block;
+            width: 100%;
+            text-align: center;
+            a{
+                display: inline-block;
+                font-size: 20px;
+                margin: 10px 0;
+                width: auto;
+            }
+        }
+    }
+    .nav-hide{
+        display: block;
+    }
+}
+
+@mixin background($repeat:no-repeat,$position:center center,$size:cover){
+    background-repeat: $repeat;
+    background-position: $position;
+    background-size: $size;
+}
+@mixin position($position:absolute,$top:0,$left:0){
+    position: $position;
+    top: $top;
+    left: $left;
+}
+.con-hide{
+    display: none;
+}
+@mixin keyframes ($moveup){
+    @-webkit-keyframes #{$moveup} {
+        @content;
+    }
+    @-moz-keyframes #{$moveup} {
+        @content;
+    }
+    @-o-keyframes #{$moveup} {
+        @content;
+    }
+    @keyframes #{$moveup} {
+        @content;
+    }
+}
+// container
+.container{
+    @include background();
+    @include position();
+    margin-top: 81px;
+    margin-bottom: 21px;
+    z-index: 2000;
+    bottom: 0;
+    .title{
+        float: left;
+        height: 100%;
+        width: 641px;
+        overflow: hidden;
+        @include position(relative,'','');
+        @include background(no-repeat, 0 15.3px, auto 100%);
+        background-attachment: fixed;
+        background-image: url("../../img/Photography_bg_161101.jpg");
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    // show--arr
+    .arr{
+        overflow: hidden;
+        position: relative;
+        bottom:0;
+        // single--cover--styles
+        .cover{
+            @include position(relative, 0, 0);
+            float: left;
+            color: #fff;
+            .data{
+                position: absolute;
+                bottom: 0; 
+                height: 70px;
+                z-index: 20;
+                padding: 0 100px 0 21px;
+                overflow: visible;
+                width: auto;
+                h3{
+                    margin: 14px 0 0 0;
+                    line-height: 100%;
+                    letter-spacing: 2.2px;
+                    font-family: "fproBook";
+                }
+            }
+            .sharing{
+                height: 64px;
+                position: absolute;
+                background-color: #121212;
+                width: 100%;
+                transition: 0.4s bottom;
+                .share{
+                    width: 18px;
+                    height: 18px;
+                    background-image: url("../../img/socials.png");
+                    background-repeat: no-repeat;
+                    opacity: 0.5;
+                    margin-top: 26px;
+                    line-height: 70px;
+                    vertical-align: middle;
+                    float: right;
+                    cursor:pointer;
+                }
+                .share-gplus{
+                    background-position:-36px 0;
+                    margin-right: 30px;
+                    margin-left: 5px;
+                }
+                .share-twitter{
+                    background-position: -18px 0;
+                    margin-right: 4px;
+                    margin-left: 5px;
+                }
+                .share-fb{
+                    background-position: 0 0;
+                    margin-left: 2px;
+                }
+            }
+            .overlay{
+                @include position(absolute,0,0);
+                right: 0;
+                bottom: -20px;
+                background-color: rgba(0, 0, 0, 0.5);
+                transition: 0.4s opacity;
+                opacity: 0;
+                .inside{
+                    @include position(absolute, -10px, 0);
+                    bottom: 140px;
+                    right: 0;
+                    transition: 0.4s bottom;
+                    display: flex;
+                    flex-direction:column;
+                    justify-content: center;
+                    align-items: center;
+                    .losange{
+                        width: 74px;
+                        height: 84px;
+                        margin: 0 auto;
+                        font-size: 10px;
+                        text-transform: uppercase;
+                        font-family: "fproBold";
+                        background-image: url('../../img/losang.png');
+                        background-repeat: no-repeat;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        span{
+                            font-size: 25px;
+                            display: block;
+                            text-align: center;
+                            line-height: 25px;
+                        }
+                    }
+                    p{
+                        text-align: center;
+                        font-family: "fproBold";
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        letter-spacing: 4px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+            // animate
+           &:hover{
+               .overlay{
+                    opacity: 1;
+                    .inside{
+                        bottom: 70px;
+                    }
+                }
+                .sharing{
+                    top: 69%;
+                }
+            } 
+        }
+    }
+}
+@media screen and (max-width:768px){
+    #container{
+        .title{
+            width: 100%;
+            float: none;
+            display: none;
+        }
+        .cover{
+            float: none;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

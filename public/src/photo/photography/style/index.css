@@ -1,0 +1,239 @@
+@import url(../../../../style/vendor.css);
+.nav {
+  height: 80px;
+  border-bottom: 1px solid #1e1e1e;
+  background-color: #121212;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-image: url("../../img/menu-halo.png");
+  background-repeat: no-repeat;
+  z-index: 3000; }
+
+.logo {
+  height: 40px;
+  min-width: 400px;
+  position: relative;
+  background: url("../../img/bg-logo.png") no-repeat;
+  margin: 0 0 0 10px;
+  padding: 24px 0 0 78px; }
+  .logo a {
+    font-family: fproBook;
+    font-size: 1.1em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2.5px; }
+  .logo p {
+    font-size: 0.6em;
+    color: rgba(187, 187, 187, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-image: url("../../img/menu-filet.png") no-repeat center center;
+    font-family: fproBook; }
+
+.nav-nav {
+  position: absolute;
+  right: 12px;
+  top: 30px;
+  z-index: 5000; }
+
+.nav-li li {
+  display: inline-block;
+  margin: 0 11px; }
+  .nav-li li a {
+    font-family: fproBook;
+    font-size: 0.75em;
+    color: #7a7a7a;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    line-height: 20px;
+    background-image: url("../../img/menu-filet.png");
+    background-position: center center;
+    background-size: 0 7px;
+    padding: 0 11px;
+    background-repeat: no-repeat;
+    transition: 0.5s background-size; }
+  .nav-li li .nav-img:hover {
+    background-size: 100% 7px; }
+  .nav-li li .nav-article:hover {
+    background-size: 100% 7px; }
+  .nav-li li .nav-about:hover {
+    background-size: 100% 7px; }
+
+.hamburger {
+  display: none;
+  z-index: 2000; }
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    background: url("../../img/btn-nav.png");
+    height: 25px;
+    width: 25px;
+    top: 35%;
+    right: 10px; }
+
+  .nav-nav {
+    display: none;
+    float: none;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 30%;
+    margin: 175px 0; }
+    .nav-nav .nav-li li {
+      display: block;
+      width: 100%;
+      text-align: center; }
+      .nav-nav .nav-li li a {
+        display: inline-block;
+        font-size: 20px;
+        margin: 10px 0;
+        width: auto; }
+
+  .nav-hide {
+    display: block; } }
+.con-hide {
+  display: none; }
+
+.container {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 81px;
+  margin-bottom: 21px;
+  z-index: 2000;
+  bottom: 0; }
+  .container .title {
+    float: left;
+    height: 100%;
+    width: 641px;
+    overflow: hidden;
+    position: relative;
+    top: "";
+    left: "";
+    background-repeat: no-repeat;
+    background-position: 0 15.3px;
+    background-size: auto 100%;
+    background-attachment: fixed;
+    background-image: url("../../img/Photography_bg_161101.jpg"); }
+    .container .title img {
+      height: 100%;
+      width: 100%; }
+  .container .arr {
+    overflow: hidden;
+    position: relative;
+    bottom: 0; }
+    .container .arr .cover {
+      position: relative;
+      top: 0;
+      left: 0;
+      float: left;
+      color: #fff; }
+      .container .arr .cover .data {
+        position: absolute;
+        bottom: 0;
+        height: 70px;
+        z-index: 20;
+        padding: 0 100px 0 21px;
+        overflow: visible;
+        width: auto; }
+        .container .arr .cover .data h3 {
+          margin: 14px 0 0 0;
+          line-height: 100%;
+          letter-spacing: 2.2px;
+          font-family: "fproBook"; }
+      .container .arr .cover .sharing {
+        height: 64px;
+        position: absolute;
+        background-color: #121212;
+        width: 100%;
+        transition: 0.4s bottom; }
+        .container .arr .cover .sharing .share {
+          width: 18px;
+          height: 18px;
+          background-image: url("../../img/socials.png");
+          background-repeat: no-repeat;
+          opacity: 0.5;
+          margin-top: 26px;
+          line-height: 70px;
+          vertical-align: middle;
+          float: right;
+          cursor: pointer; }
+        .container .arr .cover .sharing .share-gplus {
+          background-position: -36px 0;
+          margin-right: 30px;
+          margin-left: 5px; }
+        .container .arr .cover .sharing .share-twitter {
+          background-position: -18px 0;
+          margin-right: 4px;
+          margin-left: 5px; }
+        .container .arr .cover .sharing .share-fb {
+          background-position: 0 0;
+          margin-left: 2px; }
+      .container .arr .cover .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: -20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: 0.4s opacity;
+        opacity: 0; }
+        .container .arr .cover .overlay .inside {
+          position: absolute;
+          top: -10px;
+          left: 0;
+          bottom: 140px;
+          right: 0;
+          transition: 0.4s bottom;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          .container .arr .cover .overlay .inside .losange {
+            width: 74px;
+            height: 84px;
+            margin: 0 auto;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-family: "fproBold";
+            background-image: url("../../img/losang.png");
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            .container .arr .cover .overlay .inside .losange span {
+              font-size: 25px;
+              display: block;
+              text-align: center;
+              line-height: 25px; }
+          .container .arr .cover .overlay .inside p {
+            text-align: center;
+            font-family: "fproBold";
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 4px;
+            margin: 0 auto; }
+      .container .arr .cover:hover .overlay {
+        opacity: 1; }
+        .container .arr .cover:hover .overlay .inside {
+          bottom: 70px; }
+      .container .arr .cover:hover .sharing {
+        top: 69%; }
+
+@media screen and (max-width: 768px) {
+  #container .title {
+    width: 100%;
+    float: none;
+    display: none; }
+  #container .cover {
+    float: none; }
+    #container .cover img {
+      width: 100%; } }
+
+/*# sourceMappingURL=index.css.map */
